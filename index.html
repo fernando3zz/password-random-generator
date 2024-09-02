@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Character Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body{
+            background: linear-gradient(251deg, #0ca6f9, #810cf9, #78e886, #cd78e8, #a40047);
+    background-size: 1000% 1000%;
+
+    -webkit-animation: AnimationName 14s ease infinite;
+    -moz-animation: AnimationName 14s ease infinite;
+    -o-animation: AnimationName 14s ease infinite;
+    animation: AnimationName 14s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 61%}
+    50%{background-position:100% 40%}
+    100%{background-position:0% 61%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 61%}
+    50%{background-position:100% 40%}
+    100%{background-position:0% 61%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 61%}
+    50%{background-position:100% 40%}
+    100%{background-position:0% 61%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 61%}
+    50%{background-position:100% 40%}
+    100%{background-position:0% 61%}
+}
+        
+    </style>
+</head>
+<body >
+    <div class="container mt-20 w-96 mx-auto h-80 bg-slate-600 rounded-2xl text-white">
+        <h1 class="text-2xl text-center mb-10">Random Character Generator</h1>
+        <div class="flex  justify-evenly">
+            <div>
+                <label for="length"><h4>Character Length</h4></label>
+                <input type="number" id="length" min="1" max="100" value="10" class="rounded-md w-31 text-black">
+                <br>
+                <p>(max 100)</p>
+            </div>
+            <br>
+            <div class="settings">
+                <div class="setting">
+                    <input type="checkbox" id="uppercase" checked />
+                    <label>uppercase</label>
+                </div>
+                <div class="setting">
+                    <input type="checkbox" id="lowercase" checked />
+                    <label>lowercase</label>
+                </div>
+                <div class="setting">
+                    <input type="checkbox" id="numbers" checked />
+                    <label>numbers</label>
+                </div>
+                <div class="setting">
+                    <input type="checkbox" id="symbols" checked />
+                    <label>symbols</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full flex justify-center">
+            <button id="generate" class="w-fit px-32 border bg-sky-500 hover:bg-sky-700 rounded-2xl mt-5">
+                Generate
+            </button>
+        </div>
+        <hr class="mt-5">
+        <div class="mt-5 flex justify-center items-start">
+            <label for="result" class="mr-5">Result:</label>
+            <textarea id="result" readonly class="text-black"></textarea>
+            <button id="clipboard" class="bg-sky-500 hover:bg-sky-700 rounded-full ml-5 w-9 h-9">
+                <div class="flex justify-center">
+                    <img src="img/copy.png" alt="" class="">
+                </div>
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
